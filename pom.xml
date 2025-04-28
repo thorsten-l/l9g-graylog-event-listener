@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>l9g.keycloak</groupId>
   <artifactId>l9g-graylog-event-listener</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>L9G Graylog Event Listener für Keycloak</name>
 
