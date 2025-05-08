@@ -35,6 +35,7 @@ import org.jboss.logging.Logger;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.sessions.AuthenticationSessionModel;
 
@@ -152,7 +153,11 @@ public class GraylogUdpEventListener implements EventListenerProvider
       include(msg, shortMessage, "realm_name", event.getRealmName());
       include(msg, shortMessage, "client_id", event.getClientId());
       include(msg, shortMessage, "user_id", event.getUserId());
-      include(msg, shortMessage, "username", event.getDetails().get("username"));
+
+      include(msg, shortMessage, "username",
+        Optional.ofNullable(event.getDetails())
+          .map(details -> details.get("username")).orElse(null));
+
       include(msg, shortMessage, "sesson_id", event.getSessionId());
       include(msg, shortMessage, "error", event.getError());
 
