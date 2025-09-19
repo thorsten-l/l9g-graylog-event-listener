@@ -5,13 +5,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>l9g.keycloak</groupId>
   <artifactId>l9g-graylog-event-listener</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <packaging>jar</packaging>
   <name>L9G Graylog Event Listener für Keycloak</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <keycloak.version>26.3.3</keycloak.version>
+    <keycloak.version>26.3.4</keycloak.version>
     <jackson.version>2.18.3</jackson.version>
     <maven.compiler.release>21</maven.compiler.release>
   </properties>
